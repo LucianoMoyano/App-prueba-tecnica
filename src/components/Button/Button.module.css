@@ -1,0 +1,81 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+/* login  */
+.login {
+  composes: button;
+  background: var(--clr-alt);
+  color: white;
+  width: 100%;
+}
+
+.login:hover {
+  background: white;
+  color: var(--clr-alt);
+}
+
+.login span {
+  display: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.login:hover span {
+  display: block;
+}
+
+/* Logout  */
+.logout {
+  composes: button;
+  background: transparent;
+  color: var(--clr-alt);
+  border: 2px solid var(--clr-alt);
+}
+.logout:hover {
+  background: var(--clr-alt);
+  padding: 0.8rem 4rem 0.8rem 1.5rem;
+  color: #ffffff;
+}
+
+.logout span {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 50%);
+  margin-top: 0.4rem;
+}
+.logout:hover span {
+  display: block;
+}
+
+/* return */
+.return {
+  composes: logout;
+}
+
+/* card */
+.card {
+  composes: button;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.card:hover {
+  color: white;
+  border: 2px solid var(--clr-alt);
+  background-color: var(--clr-alt);
+}

@@ -1,0 +1,25 @@
+.container {
+  height: 100%;
+  width: 20rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.imgProfile {
+  height: 6rem;
+  object-fit: contain;
+  background: var(--clr-primary-300);
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+}

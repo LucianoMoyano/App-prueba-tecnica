@@ -1,0 +1,33 @@
+.footer {
+  width: 100%;
+  padding: 3rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  position: fixed;
+  bottom: 0;
+}
+
+.text {
+  font-size: 2rem;
+  text-align: center;
+}
+.link {
+  font-weight: bold;
+  color: var(--clr-alt);
+  transition: 0.3s;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2rem;
+  }
+  .text {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,96 @@
+.container {
+  margin: 2rem;
+  width: 18rem;
+  min-width: 18rem;
+  height: 27rem;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+  position: relative;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px 3px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+
+.container:hover::after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+
+.image {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: 0.3s;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1280px) {
+  .controls {
+    transform: none;
+  }
+}
+
+.container:hover .controls,
+.container:active .controls,
+.container:focus .controls {
+  transform: none;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 65%;
+  width: 100%;
+}
+.btnContainer button {
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  font-size: 4.8rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: red;
+  transition: 0.5s;
+}
+
+.label:hover {
+  transform: scale(1.2);
+}
